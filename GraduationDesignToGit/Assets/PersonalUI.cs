@@ -20,7 +20,7 @@ public class PersonalUI : MonoBehaviour
     void Update()
     {
         _player = FindObjectOfType<Player>();
-        _curSpeed.text = _player._curSpeed.ToString();
+        _curSpeed.text = "CurSpeed : " + _player._curSpeed.ToString();
         _lab.text = "Lab : " + _player._curLab + " / " + GameManager._instance._maxLab;
         _time.text = "Time : " + _curTime;
         if (_player.GameState == Player._eGameState.Play)

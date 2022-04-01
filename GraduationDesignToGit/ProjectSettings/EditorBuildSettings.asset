@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AI/AI.unity
+    guid: aeef7964d66319e40b7f9257366f3b36
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 80f2d1ca82453a84c9b3666a16bf847e
+  - enabled: 1
+    path: Assets/Scenes/Player/PersonalPlay.unity
+    guid: 39039b466098a4849affa3ed1c8e4943
+  - enabled: 1
+    path: Assets/Scenes/Player/PlayerSetting.unity
+    guid: 9fdd84c9673b0cd46b538c7b8ab77cf4
+  - enabled: 1
+    path: Assets/Scenes/AI/AI_END.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
