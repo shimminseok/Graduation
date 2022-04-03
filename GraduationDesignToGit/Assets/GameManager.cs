@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
         SetLab();
         SetInfomation();
+        Menu.ExitGame();
     }
     void SetLab()
     {

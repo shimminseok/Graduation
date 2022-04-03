@@ -24,6 +24,8 @@ public class AI_GameManage : MonoBehaviour
     void Update()
     {
         GetRank();
+        Menu.ExitGame();
+
     }
     IEnumerator GameState()
     {

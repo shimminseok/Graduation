@@ -30,6 +30,7 @@ public class PersonalUI : MonoBehaviour
             _curTime += Time.deltaTime;
         }
         UpdateUI();
+        Menu.ExitGame();
     }
     void UpdateUI()
     {

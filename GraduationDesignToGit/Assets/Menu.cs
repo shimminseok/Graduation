@@ -12,11 +12,12 @@ public class Menu : MonoBehaviour
     {
         _personalPlay = GetComponentInChildren<Button>();
         _aiPlay = GetComponentInChildren<Button>();
+
     }
 
     void Update()
     {
-
+        ExitGame();
     }
     public void PersonalPlay()
     {
@@ -25,5 +26,12 @@ public class Menu : MonoBehaviour
     public void AIPlay()
     {
         SceneManager.LoadScene("AISetting");
+    }
+    static public void ExitGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }

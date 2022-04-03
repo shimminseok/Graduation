@@ -21,6 +21,8 @@ public class AIUI : MonoBehaviour
     void Update()
     {
         SetLab();
+        Menu.ExitGame();
+
     }
     void SetLab()
     {
