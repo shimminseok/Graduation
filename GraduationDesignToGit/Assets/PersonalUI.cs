@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PersonalUI : MonoBehaviour
@@ -12,6 +13,7 @@ public class PersonalUI : MonoBehaviour
     public Text _curSpeed;
     public Text _lab;
     public Text _time;
+    public Button _reStart;
     void Start()
     {
         _name.text = " Name : " + GameManager._instance._name;
@@ -27,9 +29,17 @@ public class PersonalUI : MonoBehaviour
         {
             _curTime += Time.deltaTime;
         }
+        UpdateUI();
     }
     void UpdateUI()
     {
-
+        if (_player.GameState == Player._eGameState.End)
+        {
+            _reStart.gameObject.SetActive(true);
+        }
+    }
+    public void ReStart()
+    {
+        SceneManager.LoadScene("PlayerSetting");
     }
 }

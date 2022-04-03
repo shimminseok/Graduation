@@ -27,7 +27,7 @@ public class AIUI : MonoBehaviour
         _setLab.text = _setleb.options[_setleb.value].text;
         if (_setLab.text == "500M")
         {
-            _settingLab = 0.5f;
+            _settingLab = 4.5f;
         }
         else if (_setLab.text == "1000M")
         {

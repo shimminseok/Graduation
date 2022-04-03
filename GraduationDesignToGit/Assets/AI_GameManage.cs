@@ -11,11 +11,11 @@ public class AI_GameManage : MonoBehaviour
         Ready, Play, End
     }
     public _eGameState _gameState = _eGameState.Ready;
+    public GameObject _track;
+
     public AI[] _player;
-    public string[] _rank = new string[4];
-    public int _isRank;
-
-
+    public string[] _rank;
+    public static float[] _rankTime = new float[4];
     void Start()
     {
         StartCoroutine("GameState");
@@ -33,12 +33,30 @@ public class AI_GameManage : MonoBehaviour
     }
     void GetRank()
     {
-        for (int i = 0; i < _player.Length; i++)
+        if (_player[0]._playMode == AI._ePlayMode.End &&
+        _player[1]._playMode == AI._ePlayMode.End &&
+        _player[2]._playMode == AI._ePlayMode.End &&
+        _player[3]._playMode == AI._ePlayMode.End)
         {
-            if (_player[i]._playMode == AI._ePlayMode.End)
+            for (int i = 0; i < _player.Length; i++)
             {
                 _rank[i] = _player[i].name;
+                _rankTime[i] = _player[i]._curTime;
+
             }
+            _gameState = _eGameState.End;
+            _track.SetActive(false);
         }
     }
+    // public int getRank(string name)
+    // {
+    //     int rank = 0;
+    //     foreach (string tmp in _rank)
+    //     {
+    //         if (tmp.Equals(name))
+    //             return rank;
+    //         ++rank;
+    //     }
+    //     return -1;
+    // }
 }

@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class AI : MonoBehaviour
 {
-    public AI_GameManage _aiGameManager;
 
     public enum _ePlayMode
     {
@@ -16,14 +15,11 @@ public class AI : MonoBehaviour
     public Transform[] _target;
     public Transform _targetpos;
     Animator _animator;
-    AI _ai;
     int _nextTarget;
     int _aiSpeed;
     public float _curLab = -0.5f;
     public float _maxLab;
-    public float _turn;
     public float _curTime;
-    public static float[] _record;
 
     void Start()
     {
@@ -45,14 +41,14 @@ public class AI : MonoBehaviour
         _playMode = _ePlayMode.Play;
         GetComponent<NavMeshAgent>().speed = _aiSpeed;
         GetComponent<NavMeshAgent>().SetDestination(_targetpos.position);
-        while (true)
+        while (_playMode == _ePlayMode.Play)
         {
             _curTime += Time.deltaTime;
             float dis = (_targetpos.position - transform.position).magnitude;
             if (dis <= 1)
             {
                 _nextTarget++;
-                _aiSpeed = Random.Range(8, 11);
+                _aiSpeed = Random.Range(7, 11);
                 if (_nextTarget >= _target.Length)
                     _nextTarget = 0;
 
@@ -75,7 +71,7 @@ public class AI : MonoBehaviour
                 Vector3 dir = transform.InverseTransformPoint(lastPosition);
                 if (dir.x >= -0.01 && dir.x <= 0.01)
                 {
-                    if (_aiSpeed >= 7)
+                    if (_aiSpeed >= 10)
                     { _animator.SetBool("Sprint", true); }
                     else { _animator.SetBool("Sprint", false); }
                 }

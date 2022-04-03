@@ -24,6 +24,6 @@ public class Menu : MonoBehaviour
     }
     public void AIPlay()
     {
-        SceneManager.LoadScene("AI");
+        SceneManager.LoadScene("AISetting");
     }
 }

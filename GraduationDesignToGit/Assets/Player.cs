@@ -139,6 +139,7 @@ public class Player : MonoBehaviour
         if (_curLab == GameManager._instance._maxLab)
         {
             GameState = _eGameState.End;
+
         }
     }
     IEnumerator GameStart()

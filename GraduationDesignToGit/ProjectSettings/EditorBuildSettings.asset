@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AI/AI_END.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/AI/AISetting.unity
+    guid: 3ba7fbae2a894c943862095fff536ce6
   m_configObjects: {}
