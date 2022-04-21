@@ -25,17 +25,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-        // else
-        // {
-        //     Destroy(gameObject);
-        // }
-        // DontDestroyOnLoad(gameObject);
     }
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         SetLab();

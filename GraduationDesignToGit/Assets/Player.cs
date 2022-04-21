@@ -22,8 +22,6 @@ public class Player : MonoBehaviour
     public float _rotSpeed;
     public float _curSpeed;
     public float _curLab = -0.5f;
-
-
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -36,15 +34,10 @@ public class Player : MonoBehaviour
         this._maxSpeed = GameManager._instance._maxSpeed;
         this._rotSpeed = GameManager._instance._rotSpeed;
     }
-
     void Update()
     {
         SetCharactor();
         EndGame();
-    }
-    void FixedUpdate()
-    {
-
     }
     void Turn()
     {
@@ -65,7 +58,6 @@ public class Player : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
         float move = v * _curSpeed;
         Vector3 MoveVec = transform.forward * move;
-        Vector3 y = Vector3.down;
         _characterController.SimpleMove(MoveVec);
         if (v != 0)
         {

@@ -65,10 +65,6 @@ public class SetInfo : MonoBehaviour
             _character[3].gameObject.SetActive(true);
         }
     }
-    void SetInfomation()
-    {
-
-    }
     public void GameStart()
     {
         SceneManager.LoadScene("PersonalPlay");

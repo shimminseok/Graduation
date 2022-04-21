@@ -50,15 +50,4 @@ public class AI_GameManage : MonoBehaviour
             _track.SetActive(false);
         }
     }
-    // public int getRank(string name)
-    // {
-    //     int rank = 0;
-    //     foreach (string tmp in _rank)
-    //     {
-    //         if (tmp.Equals(name))
-    //             return rank;
-    //         ++rank;
-    //     }
-    //     return -1;
-    // }
 }

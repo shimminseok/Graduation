@@ -13,7 +13,7 @@ public class PersonalUI : MonoBehaviour
     public Text _curSpeed;
     public Text _lab;
     public Text _time;
-    public Button _reStart;
+    public Button _reStart; 
     void Start()
     {
         _name.text = " Name : " + GameManager._instance._name;
